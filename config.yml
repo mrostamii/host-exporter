@@ -1,0 +1,4 @@
+host: drnext.ir
+port: 80
+check-interval: 3 # in second
+metric-port: 8081
