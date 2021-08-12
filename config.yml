@@ -1,4 +1,4 @@
-host: drnext.ir
+host: example.com
 port: 80
-check-interval: 3 # in second
-metric-port: 8081
+check-interval: 15 # in second
+metric-port: 8080

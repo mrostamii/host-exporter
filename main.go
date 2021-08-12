@@ -1,7 +1,6 @@
 package main
 
 import (
-	"fmt"
 	"log"
 	"net"
 	"net/http"
@@ -32,10 +31,10 @@ func Tcp(host, port string) {
 	timeout := time.Duration(1 * time.Second)
 	_, err := net.DialTimeout("udp", host+":"+port, timeout)
 	if err != nil {
-		fmt.Printf("%s %s %s\n", host, "not responding", err.Error()) // uncomment if you need log
+		// fmt.Printf("%s %s %s\n", host, "not responding", err.Error()) // uncomment if you need log
 		OpsHostTcpUnavailable.Inc()
 	} else {
-		fmt.Printf("%s %s %s\n", host, "responding on port:", port) // uncomment if you need log
+		// fmt.Printf("%s %s %s\n", host, "responding on port:", port) // uncomment if you need log
 		OpsHostTcpAvailable.Inc()
 	}
 }
